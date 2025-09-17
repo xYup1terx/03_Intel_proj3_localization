@@ -103,6 +103,7 @@ section > div:last-child {
 html, body {
 	overflow-x: hidden;
 	max-width: 100vw;
+	background: #e3e3e5; /* Off white background for the site */
 }
 .timeline-wrapper {
 	display: block;
@@ -133,11 +134,12 @@ section {
 	width: 100%;
 	max-width: 100vw;
 	scrollbar-width: thin; /* For Firefox */
+	background: #fff; /* White background behind timeline */
 }
 
 section > div {
 	flex-shrink: 0; /* Prevent cards from shrinking */
-	background: #f4f8fb;
+		background: #fff; /* Timeline cards stay white */
 	border-radius: 12px;
 	box-shadow: 0 2px 8px rgba(15, 59, 167, 0.08);
 	 border: 2px solid #90caf9; /* Lighter blue border by default */
@@ -243,6 +245,13 @@ header {
 		text-align: center;
 		font-family: 'Segoe UI', 'Arial', 'Helvetica Neue', sans-serif; /* Change font for hero info */
     
+}
+/* For large screens, add more left/right padding to center content visually */
+@media (min-width: 900px) {
+  body {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
 }
 
 header img {

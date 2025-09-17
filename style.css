@@ -1,3 +1,23 @@
+/* RTL support for timeline section and cards */
+[dir="rtl"] section {
+	direction: rtl;
+}
+[dir="rtl"] section > div {
+		text-align: right;
+	}
+
+	/* Prevent RTL text overflow in timeline cards */
+	[dir="rtl"] section > div h2,
+	[dir="rtl"] section > div h3,
+	[dir="rtl"] section > div p {
+		word-break: break-word;
+		overflow-wrap: anywhere;
+		white-space: normal;
+	}
+	[dir="rtl"] section > div {
+		max-width: 280px;
+		box-sizing: border-box;
+}
 /* Responsive: Shrink hero header text for very small screens */
 @media (max-width: 420px) {
 	header h1 {
@@ -144,14 +164,28 @@ section > div {
 	box-shadow: 0 2px 8px rgba(15, 59, 167, 0.08);
 	 border: 2px solid #90caf9; /* Lighter blue border by default */
 	width: 280px;
+	max-width: 280px;
 	min-height: 340px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	padding: 24px 16px;
 	position: relative;
-	 transition: transform 0.2s, border-color 0.2s;
-  font-family: 'Segoe UI', 'Arial', 'Helvetica Neue', sans-serif; /* Match hero header font */
+	box-sizing: border-box;
+	transition: transform 0.2s, border-color 0.2s;
+	font-family: 'Segoe UI', 'Arial', 'Helvetica Neue', sans-serif; /* Match hero header font */
+}
+
+/* Ensure all text inside timeline cards wraps and stays inside */
+section > div > h2,
+section > div > h3,
+section > div > p {
+	word-break: break-word;
+	overflow-wrap: anywhere;
+	white-space: normal;
+	box-sizing: border-box;
+	max-width: 100%;
+}
 }
 
 /* Add a blue translucent square behind each timeline card */

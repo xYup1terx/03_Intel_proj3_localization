@@ -1,0 +1,17 @@
+/* Stack timeline cards vertically only on phones and tablets */
+@media (max-width: 900px) {
+  section {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 16px;
+    overflow-x: visible;
+  }
+  section > div {
+    width: 90vw;
+    min-width: 0;
+    max-width: 400px;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+}

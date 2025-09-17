@@ -1,0 +1,279 @@
+/* Responsive: Shrink hero header text for very small screens */
+@media (max-width: 420px) {
+	header h1 {
+		font-size: 1.7em !important;
+		word-break: normal;
+		white-space: normal;
+	}
+}
+
+@media (max-width: 600px) {
+	header {
+		padding: 24px 8px;
+	}
+	header h1 {
+		font-size: 1.5em;
+		word-break: normal;
+		white-space: normal;
+	}
+	.hero-desc {
+		font-size: 1em;
+		max-width: 95vw;
+		padding: 0 4vw;
+		word-break: normal;
+		white-space: normal;
+	}
+}
+section > div:first-child {
+	margin-left: 24px;
+}
+section > div:last-child {
+	margin-right: 24px;
+}
+/* Responsive: Shrink hero header text for very small screens */
+@media (max-width: 900px) {
+	section {
+		flex-direction: column;
+		gap: 0;
+	}
+	section > div {
+		margin: 12px 0;
+	}
+	section > div:first-child {
+		margin: 0;
+	}
+	section > div:last-child {
+		margin: 0;
+	}
+}
+@media (max-width: 600px) {
+	header {
+		padding: 24px 8px;
+	}
+	header h1 {
+		font-size: 1.7em;
+		word-break: normal;
+		white-space: normal;
+	}
+	.hero-desc {
+		font-size: 1em;
+		max-width: 95vw;
+		padding: 0 4vw;
+		word-break: normal;
+		white-space: normal;
+	}
+}
+/* Style for hero section description text */
+.hero-desc {
+	font-size: 1.3em;
+	color: #e3eaf6;
+	max-width: 800px;
+	margin: 0 auto;
+	font-family: 'Segoe UI', 'Arial', 'Helvetica Neue', sans-serif;
+	text-shadow: 0 1px 4px rgba(15, 59, 167, 0.12);
+	letter-spacing: 0.02em;
+	line-height: 1.5;
+}
+@keyframes hero-pulse-color {
+	0% { color: #fff; }
+	30% { color: #2b92f9; }
+	50% { color: #fff; }
+	100% { color: #fff; }
+}
+@keyframes hero-pulse {
+	0% { transform: scale(1); }
+	30% { transform: scale(1.13); }
+	50% { transform: scale(1); }
+	100% { transform: scale(1); }
+}
+/* Jump animation for timeline info */
+/* Removed pulse animation */
+
+.timeline-info {
+	display: block;
+	text-align: center;
+	font-size: 1.1em;
+	margin: 16px auto 0 auto;
+	/* Removed pulse animation */
+}
+
+.timeline-info:hover {
+	/* Removed pulse animation */
+}
+html, body {
+	overflow-x: hidden;
+	max-width: 100vw;
+}
+.timeline-wrapper {
+	display: block;
+	width: 100%;
+	max-width: 100vw;
+	margin: 0 auto;
+	overflow-x: auto; /* Only timeline cards scroll horizontally */
+	white-space: nowrap;
+}
+.timeline-info {
+  font-size: 1.0em;
+  color: #1976d2;
+  text-align: center;
+  padding: 12px 0;
+  font-family: 'Segoe UI', 'Arial', 'Helvetica Neue', sans-serif; /* Match hero header font */
+  
+
+}
+/* Timeline Section Styles */
+section {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	gap: 24px;
+	padding: 40px 0;
+	overflow-x: auto; /* Enable horizontal scrolling for cards only */
+	width: 100%;
+	max-width: 100vw;
+	scrollbar-width: thin; /* For Firefox */
+}
+
+section > div {
+	flex-shrink: 0; /* Prevent cards from shrinking */
+	background: #f4f8fb;
+	border-radius: 12px;
+	box-shadow: 0 2px 8px rgba(15, 59, 167, 0.08);
+	 border: 2px solid #90caf9; /* Lighter blue border by default */
+	width: 280px;
+	min-height: 340px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 24px 16px;
+	position: relative;
+	 transition: transform 0.2s, border-color 0.2s;
+  font-family: 'Segoe UI', 'Arial', 'Helvetica Neue', sans-serif; /* Match hero header font */
+}
+
+/* Add a blue translucent square behind each timeline card */
+section > div::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 90%;
+  height: 90%;
+  background: rgba(25, 118, 210, 0.18); /* Intel blue, translucent */
+  border-radius: 16px;
+  z-index: 0;
+}
+
+section > div > * {
+  position: relative;
+  z-index: 1;
+}
+
+section > div:hover {
+	transform: translateY(-6px) scale(1.03);
+	box-shadow: 0 6px 16px rgba(15, 59, 167, 0.15);
+	 border-color: #1976d2; /* Change border to Intel blue on hover */
+}
+
+section h2 {
+	color: #1976d2;
+	font-size: 1.9em;
+	margin-bottom: 0.2em;
+  text-decoration: underline;
+}
+
+section h3 {
+		color: #0f3ba7;
+		font-size: 1.5em;
+		margin-bottom: 0.5em;
+}
+
+section p {
+				color: #0f3ba7;
+			font-size: 1em;
+			font-weight: bold;
+			margin-top: 0.5em;
+			text-align: center;
+			margin: 0;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(255,255,255,0.95);
+			border-radius: 12px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			opacity: 0;
+			pointer-events: none;
+			transition: opacity 0.2s;
+			padding: 16px;
+			box-sizing: border-box;
+			white-space: normal; /* Allow text to wrap */
+			word-break: break-word; /* Prevent overflow */
+			z-index: 2;
+}
+
+section > div:hover > p {
+		opacity: 1;
+		pointer-events: auto;
+}
+
+/* Image slot for each card */
+section .timeline-img {
+		width: 140px;
+		height: 140px;
+	background: #e3eaf6;
+	border-radius: 8px;
+	margin-bottom: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+/* Add your CSS here */
+/* Hero Section Banner Styles */
+header {
+		/* Blue gradient background for Intel theme */
+		background: linear-gradient(90deg, #0f3ba7 0%, #1976d2 100%);
+		color: white; /* Make text readable on blue */
+		padding: 40px 0;
+		text-align: center;
+		font-family: 'Segoe UI', 'Arial', 'Helvetica Neue', sans-serif; /* Change font for hero info */
+    
+}
+
+header img {
+	/* Make the logo larger for the hero section */
+	width: 180px;
+	height: auto;
+		margin-bottom: 2px;
+	transition: transform 0.3s ease;
+		animation: hero-pulse 0.7s ease 0.3s;
+}
+}
+
+header img:hover {
+	transform: scale(1.05);
+}
+
+header h1 {
+				font-size: 3.7em;
+				margin: 0.5em 0 0.2em 0;
+				font-family: inherit; /* Use the header font family */
+				color: #fff;
+					animation: hero-pulse 0.7s ease 0.5s;
+}
+
+header h1:hover {
+  transform: scale(1.05);
+  color: #00c7fd;
+header p {
+		font-size: 1.2em;
+		max-width: 600px;
+		margin: 0 auto;
+		font-family: inherit; /* Use the header font family */
+    
+}

@@ -1,3 +1,54 @@
+/* Style for Learn More links with blue border */
+.learn-more-link {
+	border: 2px solid #1976d2; /* Intel blue */
+	border-radius: 6px;
+	padding: 6px 16px;
+	color: #1976d2;
+	text-decoration: none;
+	transition: background 0.2s, color 0.2s;
+}
+
+.learn-more-link:hover {
+	background: #1976d2;
+	color: #fff;
+}
+/* Add left and right padding to the submit button */
+.btn.btn-primary {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+/* Make sure the subscribe section is full width and centers its content */
+.subscribe-section {
+	width: 100%;
+	display: block;
+	text-align: center;
+  background-color: #e3eaf6;
+  padding: 30px 0;
+  padding-bottom: 40px;
+}
+
+/* Center the heading and allow auto width */
+.subscribe-section h2 {
+	display: inline-block !important;
+	width: auto !important;
+	text-align: center !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+footer a {
+	color: #fff;
+	text-decoration: underline;
+}
+footer a:hover {
+	color: #90caf9;
+}
+/* Make the footer section blue with white text */
+footer {
+	background: #1976d2;
+	color: #fff;
+	padding: 5px 0;
+	text-align: center;
+}
 /* RTL support for timeline section and cards */
 [dir="rtl"] section {
 	direction: rtl;
@@ -321,3 +372,24 @@ header p {
     
 }
 
+}
+.subscribe-section h2:hover {
+  transform: scale(1.05);
+  color: #1976d2;
+}
+
+
+
+.subscribe-section h5 {
+  color: #1976d2;
+  font-family: 'Segoe UI', 'Arial', 'Helvetica Neue', sans-serif; /* Match hero header font */
+  margin-bottom: 20px;
+}
+
+.p-4.bg-light.rounded.shadow-sm.h-100.text-center h4 {
+  color: #0f3ba7;
+
+  .btn btn-primary {
+    padding-left: 20px;
+    padding-right: 20px;
+  }

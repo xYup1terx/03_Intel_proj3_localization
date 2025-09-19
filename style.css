@@ -154,7 +154,7 @@ section {
 	width: 100%;
 	max-width: 100vw;
 	scrollbar-width: thin; /* For Firefox */
-	background: #d9e4ec; /* Light blue background behind timeline, matches card background */
+	background: #fff; /* White background behind timeline */
 }
 
 section > div {
